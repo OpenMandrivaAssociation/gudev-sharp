@@ -29,6 +29,7 @@ This is a Mono binding for GUdev based on GTk#.
 %package devel
 Summary: Development files for %name
 Requires: %name = %version-%release
+Group: Development/Other
 
 %description devel
 This is a Mono binding for GUdev based on GTk#.
