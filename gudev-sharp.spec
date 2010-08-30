@@ -19,7 +19,9 @@ BuildRequires: gtk+2-devel
 BuildRequires: libgudev-devel >= %udev
 BuildRequires: gtk-sharp2
 BuildRequires: gtk-sharp2-devel
+%if %mdvver >= 201100
 Requires: libgudev >= %udev
+%endif
 #gw filter out deps from *.dll.config
 %define _requires_exceptions ^lib.*0$
 
