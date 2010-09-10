@@ -1,14 +1,15 @@
 %define name gudev-sharp
 %define version 0.1
-%define git 20100713
-%define release %mkrel -c %git 1
+%define git cd3e7df
+%define release %mkrel 1
 %define api 1.0
 %define udev 146
 Summary: Mono bindings for the GUdev library
 Name: %{name}
 Version: %{version}
 Release: %{release}
-Source0: %{name}-%{git}.tar.xz
+# http://github.com/mono/gudev-sharp/tarball/GUDEV_SHARP_0_1
+Source0: %{name}-%{version}.tar.gz
 License: LGPLv2+
 Group: System/Libraries
 Url: http://gitorious.org/gudev-sharp/
@@ -37,7 +38,7 @@ Group: Development/Other
 This is a Mono binding for GUdev based on GTk#.
 
 %prep
-%setup -q -n %name
+%setup -q -n mono-%name-%git
 ./autogen.sh
 
 %build
