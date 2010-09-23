@@ -12,7 +12,7 @@ Release: %{release}
 Source0: %{name}-%{version}.tar.gz
 License: LGPLv2+
 Group: System/Libraries
-Url: http://gitorious.org/gudev-sharp/
+Url: http://github.com/mono/gudev-sharp
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildArch: noarch
 BuildRequires: mono-devel
