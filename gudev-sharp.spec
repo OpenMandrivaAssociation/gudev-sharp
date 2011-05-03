@@ -1,7 +1,7 @@
 %define name gudev-sharp
 %define version 0.1
 %define git cd3e7df
-%define release %mkrel 1
+%define release %mkrel 2
 %define api 1.0
 %define udev 146
 Summary: Mono bindings for the GUdev library
