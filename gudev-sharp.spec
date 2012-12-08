@@ -1,9 +1,10 @@
 %define name gudev-sharp
 %define version 0.1
 %define git cd3e7df
-%define release %mkrel 3
+%define release 5
 %define api 1.0
 %define udev 146
+
 Summary: Mono bindings for the GUdev library
 Name: %{name}
 Version: %{version}
@@ -13,18 +14,14 @@ Source0: %{name}-%{version}.tar.gz
 License: LGPLv2+
 Group: System/Libraries
 Url: http://github.com/mono/gudev-sharp
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
+
 BuildArch: noarch
 BuildRequires: mono-devel
 BuildRequires: gtk+2-devel
-BuildRequires: libgudev-devel >= %udev
+BuildRequires: pkgconfig(gudev-1.0)
 BuildRequires: gtk-sharp2
 BuildRequires: gtk-sharp2-devel
-%if %mdvver >= 201100
 Requires: libgudev >= %udev
-%endif
-#gw filter out deps from *.dll.config
-%define _requires_exceptions ^lib.*0$
 
 %description
 This is a Mono binding for GUdev based on GTk#.
@@ -49,15 +46,28 @@ This is a Mono binding for GUdev based on GTk#.
 rm -rf %{buildroot}
 %makeinstall_std pkgconfigdir=%_datadir/pkgconfig
 
-%clean
-rm -rf %{buildroot}
-
 %files
-%defattr(-,root,root)
 %doc AUTHORS
 %_prefix/lib/mono/%name-%api
 %_prefix/lib/mono/gac/%name
 
 %files devel
-%defattr(-,root,root)
 %_datadir/pkgconfig/%name-%api.pc
+
+
+%changelog
+* Tue May 03 2011 Oden Eriksson <oeriksson@mandriva.com> 0.1-2mdv2011.0
++ Revision: 664961
+- mass rebuild
+
+  + Götz Waschk <waschk@mandriva.org>
+    - update URL
+
+* Fri Sep 10 2010 Götz Waschk <waschk@mandriva.org> 0.1-1mdv2011.0
++ Revision: 577096
+- switch to 0.1 release
+
+* Mon Aug 30 2010 Götz Waschk <waschk@mandriva.org> 0.1-0.20100713.1mdv2011.0
++ Revision: 574374
+- import gudev-sharp
+
