@@ -5,7 +5,7 @@
 Summary:	Mono bindings for the GUdev library
 Name:		gudev-sharp
 Version:	0.1
-Release:	10
+Release:	11
 # http://github.com/mono/gudev-sharp/tarball/GUDEV_SHARP_0_1
 License:	LGPLv2+
 Group:		System/Libraries
