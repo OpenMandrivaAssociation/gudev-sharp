@@ -9,7 +9,7 @@ Release:	15
 # http://github.com/mono/gudev-sharp/tarball/GUDEV_SHARP_0_1
 License:	LGPLv2+
 Group:		System/Libraries
-Url:		http://github.com/mono/gudev-sharp
+Url:		https://github.com/mono/gudev-sharp
 Source0:	%{name}-%{version}.tar.gz
 BuildArch:	noarch
 
