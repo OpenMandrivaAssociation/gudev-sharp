@@ -13,6 +13,11 @@ Url:		https://github.com/mono/gudev-sharp
 Source0:	%{name}-%{version}.tar.gz
 BuildArch:	noarch
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	pkgconfig(gapi-2.0)
 BuildRequires:	pkgconfig(gtk-sharp-2.0)
 BuildRequires:	pkgconfig(gtk+-2.0)
